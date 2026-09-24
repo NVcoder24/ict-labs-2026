@@ -26,6 +26,7 @@ Continue? (Y/N)>N
 #include <iostream>
 #include <string>
 #include <sstream>
+#include <iomanip>
 
 
 bool getUserInput(unsigned int& secs) {
@@ -110,7 +111,10 @@ bool printFormatedTime(unsigned int time) {
     int m = time / secsInMin % 60;
     int s = time % 60;
 
-    std::cout << fmtDoubleDigit(h) << ":" << fmtDoubleDigit(m) << ":" << fmtDoubleDigit(s) << "\n";
+    std::cout << std::setfill('0') << 
+        std::setw(2) << h << ":" << 
+        std::setw(2) << m << ":" << 
+        std::setw(2) << s << "\n";
 
     return true;
 }
