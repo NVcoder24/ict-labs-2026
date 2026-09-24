@@ -111,7 +111,7 @@ bool askDoContinue() {
 }
 
 template<typename T>
-std::string prettyVector(std::vector<T> v) {
+std::string prettyVector(std::vector<T> &v) {
     std::string s = "[";
     u_int vSize = v.size();
     for (u_int i = 0; i < vSize; i++) {
