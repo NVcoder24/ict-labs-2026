@@ -78,10 +78,10 @@ bool askDoContinue() {
             continue;
         }
 
-        if (ans == 'Y') {
+        if (ans == 'Y' || ans == 'y') {
             return true;
         }
-        else if (ans == 'N') {
+        else if (ans == 'N' || ans == 'n') {
             return false;
         }
         else {
