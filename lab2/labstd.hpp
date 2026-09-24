@@ -109,17 +109,3 @@ bool askDoContinue() {
         }
     }
 }
-
-void printGeometricProgression(double start, double ratio, unsigned int numberOfEl) {
-    float result;
-    if (ratio == 1) {
-        result = start;
-    } else {
-        result = (start * (std::pow(ratio, numberOfEl) - 1)) / (ratio - 1);
-    }
-    if (std::isinf(result) || std::isnan(result)) {
-        std::cout << "Unable to calculate result. (try smaller values)\n";
-    } else {
-        std::cout << "Result: " << result << "\n";
-    }
-}
